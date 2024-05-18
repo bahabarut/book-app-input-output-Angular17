@@ -1,0 +1,16 @@
+.book-card{
+    width: 400px;
+    justify-content: space-between;
+}
+.book-img{
+   object-fit: cover;
+   width: 120px;
+   height: 130px;
+   padding-right: 8px;
+}
+.card-div{
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+   justify-content: center;
+}

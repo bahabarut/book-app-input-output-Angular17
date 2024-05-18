@@ -1,0 +1,19 @@
+<div class="card-div">
+    @for (item of bookList | filter: categoryName; track $index) {
+    <mat-card class="book-card">
+        <mat-card-header>
+            <img class="book-img" mat-card-sm-image src="{{item.ImageUrl}}">
+            <mat-card-title-group>
+                <mat-card-title>{{item.name}}</mat-card-title>
+                <mat-card-subtitle><strong>Author :</strong> {{item.author}}</mat-card-subtitle>
+                <mat-card-subtitle><strong>Category :</strong> {{item.category}}</mat-card-subtitle>
+                <mat-card-subtitle><strong>Year :</strong> {{item.year}}</mat-card-subtitle>
+                <mat-card-subtitle style="display: flex;"><strong>Star : &nbsp;</strong> <app-star starNumber="{{item?.star}}"> </app-star></mat-card-subtitle>
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="EmitBookEvent(item)">Sepete Ekle</button>
+        </mat-card-actions>
+    </mat-card>
+    }
+</div>

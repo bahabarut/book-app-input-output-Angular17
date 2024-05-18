@@ -1,0 +1,11 @@
+<nav class="navbar">
+    <div>
+        <button (click)="FilterEventEmit('all')" routerLinkActive="router-link-active" class="nav-items" mat-button color="primary">Books Library</button>
+        @for (item of categories; track $index) {
+            <button (click)="FilterEventEmit(item)" class="nav-items" mat-button color="primary">{{item}}</button>
+        }
+    </div>
+    <div class="basket">
+        <mat-icon matBadge="{{basket.length}}" matBadgeColor="warn">book</mat-icon>
+    </div>
+</nav>

@@ -1,0 +1,5 @@
+<app-header [categories]="categories" [basket]="basket" (filterEv)="FilterBook($event)"></app-header>
+<div class="container">
+    <app-book-card [bookList]="bookList" categoryName="{{categoryName}}" (bookEvent)="AddToBasket($event)"></app-book-card>
+</div>
+<app-footer Name="Baha" Surname="Barut" Text="BTK Akademi." (logEvent)="PrintLogConsole($event)"></app-footer>
